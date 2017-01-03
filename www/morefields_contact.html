@@ -19,6 +19,8 @@
     <script>
       $( document ).ready(function() {
         console.log( "document loaded" );
+        $('select').material_select();
+
       });
     </script>
 
@@ -31,7 +33,7 @@
 
       main {
         flex: 1 0 auto;
-        margin-left: 50px;
+        /*margin-left: 50px;*/
       }
 
       .margin-logo{
@@ -40,7 +42,7 @@
       }
 
       .email-div{
-        margin: 50px;
+        margin: 20px;
       }
 
       .input_no_icons{
@@ -48,6 +50,17 @@
       }
       .btn-image{
         left: 50px;
+        margin-top: 10px;
+      }
+
+      .add-photo{
+        margin-left: 50px;
+        width: 50px;
+        height: 50px;
+      }
+
+      .person-icon{
+        font-size: 50px;
       }
     </style>
   </head>
@@ -57,7 +70,7 @@
       <nav>
         <div class="nav-wrapper z-depth-1 blue">
           <div class="left margin-logo">
-            <a href="index.html" class="white-text "><i class="material-icons" id="back-btn">arrow_back</i></a>
+            <a href="addnewcontact.html" class="white-text "><i class="material-icons" id="back-btn">arrow_back</i></a>
           </div>
 
           <div class="left"><span id="logo-name" class="brand-logo margin-logo">Add new contact</span></div>
@@ -71,116 +84,139 @@
     </header>
 
     <main class="white">
-
-      <div class="row">
-        <!-- here -->
-
-
-        <div class="col s12 email-div">
-          <strong>Google account</strong><br>
-          <span class="grey-text">sutinee742@gmail.com</span>
-        </div>
-
-        <form class="col s12">
-          <div class="row">
-
-            <div class="input-field col s11">
-              <i class="material-icons prefix">person</i>
-              <input id="" type="text" class="validate" placeholder="Name">
-            </div>
+      <div class="container">
+        <div class="row">
+          <!-- here -->
 
 
-            <div class="input-field col s11">
-              <i class="material-icons prefix"></i>
-              <input id="" type="text" class="validate" placeholder="Phonetic name">
-            </div>
-
-            <div class="input-field col s11 ">
-              <i class="material-icons prefix"></i>
-              <input id="" type="text" class="validate" placeholder="Nickname">
-            </div>
-
-            <div class="input-field col s11">
-              <i class="material-icons prefix">local_see</i>
-              <img>
-              <a class="waves-effect waves-dark white black-text btn btn-image">Change</a>
-            </div>
-
-            <div class="input-field col s11 ">
-              <i class="material-icons prefix">phone</i>
-              <input id="" type="tel" class="validate" placeholder="Phone">
-            </div>
-
-
-            <div class="input-field col s11">
-              <i class="material-icons prefix">email</i>
-              <input id="" type="email" class="validate" placeholder="Email">
-            </div>
-
-            <div class="input-field col s11">
-              <i class="material-icons prefix">place</i>
-              <input id="" type="text" class="validate" placeholder="Address">
-            </div>
-
-            <div class="input-field col s11">
-              <i class="material-icons prefix">insert_invitation</i>
-              <input type="date" class="datepicker" placeholder="Date">
-            </div>
-
-            <script type="text/javascript">
-              $('.datepicker').pickadate({
-                 selectMonths: true, // Creates a dropdown to control month
-                 selectYears: 15 // Creates a dropdown of 15 years to control year
-               });
-            </script>
-
-            <div class="input-field col s11">
-              <i class="material-icons prefix">domain</i>
-              <input id="" type="text" class="validate" placeholder="Company">
-            </div>
-
-            <div class="input-field col s11">
-              <i class="material-icons prefix"></i>
-              <input id="" type="text" class="validate" placeholder="Title">
-            </div>
-
-            <div class="input-field col s11">
-              <i class="material-icons prefix">comment</i>
-              <input id="" type="text" class="validate" placeholder="Notes">
-            </div>
-
-            <div class="input-field col s11">
-              <i class="material-icons prefix">message</i>
-              <input id="" type="text" class="validate" placeholder="IM">
-            </div>
-
-            <div class="input-field col s11">
-              <i class="material-icons prefix">dialer_sip</i>
-              <input id="" type="text" class="validate" placeholder="SIP">
-            </div>
-
-            <div class="input-field col s11">
-              <select multiple>
-                <option value="" disabled selected>Group Name</option>
-                <option value="1">Option 1</option>
-                <option value="2">Option 2</option>
-                <option value="3">Option 3</option>
-              </select>
-            </div>
-
-            <div class="input-field col s11">
-              <i class="material-icons prefix">public</i>
-              <input id="" type="text" class="validate" placeholder="Website">
-            </div>
-
-            <div class="input-field col s11">
-              <i class="material-icons prefix">device_hub</i>
-              <input id="" type="text" class="validate" placeholder="Relationship">
-            </div>
-
+          <div class="col s12 email-div">
+            <strong>Google account</strong><br>
+            <span class="grey-text">sutinee742@gmail.com</span>
           </div>
-        </form>
 
+          <form class="col s12">
+            <div class="row">
+
+              <div class="input-field col s11">
+                <i class="material-icons prefix">person</i>
+                <input id="" type="text" class="validate" placeholder="Name">
+              </div>
+              <div class="col s1"></div>
+
+              <div class="input-field col s11">
+                <i class="material-icons prefix"></i>
+                <input id="" type="text" class="validate" placeholder="Phonetic name">
+              </div>
+              <div class="col s1"></div>
+
+              <div class="input-field col s11 ">
+                <i class="material-icons prefix"></i>
+                <input id="" type="text" class="validate" placeholder="Nickname">
+              </div>
+              <div class="col s1"></div>
+
+              <div class="input-field col s11">
+                <i class="material-icons prefix ">local_see</i>
+                <div class="add-photo grey">
+                  <i class="material-icons white-text person-icon">person</i>
+                </div>
+                <a class="waves-effect waves-dark white black-text btn btn-image">Change</a>
+              </div>
+              <div class="col s1"></div>
+
+              <div class="input-field col s11 ">
+                <i class="material-icons prefix">phone</i>
+                <input id="" type="tel" class="validate" placeholder="Phone">
+              </div>
+              <div class="col s1"></div>
+
+              <div class="input-field col s11">
+                <i class="material-icons prefix">email</i>
+                <input id="" type="email" class="validate" placeholder="Email">
+              </div>
+              <div class="col s1"></div>
+
+              <div class="input-field col s11">
+                <i class="material-icons prefix">place</i>
+                <input id="" type="text" class="validate" placeholder="Address">
+              </div>
+              <div class="col s1"></div>
+
+              <div class="input-field col s11">
+                <i class="material-icons prefix">insert_invitation</i>
+                <input type="date" class="datepicker" placeholder="Date">
+              </div>
+              <div class="col s1"></div>
+
+              <script type="text/javascript">
+                $('.datepicker').pickadate({
+                   selectMonths: true, // Creates a dropdown to control month
+                   selectYears: 15 // Creates a dropdown of 15 years to control year
+                 });
+              </script>
+
+              <div class="input-field col s11">
+                <i class="material-icons prefix">domain</i>
+                <input id="" type="text" class="validate" placeholder="Company">
+              </div>
+              <div class="col s1"></div>
+
+              <div class="input-field col s11">
+                <i class="material-icons prefix"></i>
+                <input id="" type="text" class="validate" placeholder="Title">
+              </div>
+              <div class="col s1"></div>
+
+              <div class="input-field col s11">
+                <i class="material-icons prefix">comment</i>
+                <input id="" type="text" class="validate" placeholder="Notes">
+              </div>
+              <div class="col s1"></div>
+
+              <div class="input-field col s11">
+                <i class="material-icons prefix">message</i>
+                <input id="" type="text" class="validate" placeholder="IM"/>
+              </div>
+              <div class="col s1"></div>
+
+              <div class="input-field col s11">
+                <i class="material-icons prefix">dialer_sip</i>
+                <input id="" type="text" class="validate" placeholder="SIP"/>
+              </div>
+              <div class="col s1"></div>
+
+
+
+              <div class="input-field col s11">
+                <i class="material-icons prefix">group</i>
+                <select multiple >
+                  <option value="" disabled selected>Choose your option</option>
+                  <option value="1" >Friends</option>
+                  <option value="2">Family</option>
+                  <option value="3">Coworkers</option>
+                </select>
+
+                <a class="waves-effect waves-dark white black-text btn btn-image">Create new group</a>
+
+              </div>
+              <div class="col s1"></div>
+
+              <div class="input-field col s11">
+                <i class="material-icons prefix">public</i>
+                <input id="" type="text" class="validate" placeholder="Website">
+              </div>
+              <div class="col s1"></div>
+
+              <div class="input-field col s11">
+                <i class="material-icons prefix">device_hub</i>
+                <input id="" type="text" class="validate" placeholder="Relationship">
+              </div>
+              <div class="col s1"></div>
+
+            </div>
+          </form>
+
+        </div>
       </div>
 
     </main>
